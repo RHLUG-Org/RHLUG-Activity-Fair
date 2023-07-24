@@ -1,0 +1,154 @@
+<html>
+    <body onclick="resetTime()">
+        <div class="slider">
+            <div class="slide" id=1>
+                <h1>Let's Get Started!</h1>
+                <div class="codesCont">
+                    <div class="code">
+                        <div class="logoCont" style="background: #5165f6">
+                            <img class="qr" src="img/discord-join.svg">
+                            <img class="logo" src="img/discordlogo.png">
+                        </div>
+                    </div>
+                    <div class="code">
+                        <div class="logoCont" style="background: #ccc">
+                            <img class="qr" src="img/matrix-join.svg">
+                            <img class="logo" src="img/matrixlogo.svg" style="transform: scale(0.8);">
+                        </div>
+                    </div>
+                    <div class="code">
+                        <div class="logoCont" style="background: #039be6">
+                            <img class="qr" src="img/telegram-join.svg">
+                            <img class="logo" src="img/telegramlogo.png">
+                        </div>
+                    </div>
+                </div>
+                <p>Scan one of the QR codes to join our chat room on the platform of your choice. When you have done so, please click next</p>
+            </div>
+            <div class="slide" id=2>
+                <h1>Time to make it official!</h1>
+                <div class="codesCont">
+                    <div class="code">
+                        <div class="logoCont" style="background: #005fbf">
+                            <img class="qr" src="img/cg-join.svg">
+                            <img class="logo" src="img/cglogo.png">
+                        </div>
+                    </div>
+                </div>
+                <p>Scan the QR code to join us on Campus Groups. When you have done so, please click next</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button onclick="goBack()">Back</button>
+            <button onclick="goNext()" float="right">Next</button>
+        </div>
+        <button id="exit" onclick="goHome()">Exit</button>
+    </body>
+    <style>
+    body {
+        text-align: center;
+        color: #eee;
+        background: #800;
+        font-family: sans-serif;
+    }
+
+    .codesCont {
+        width: min-content;
+        display: flex;
+        margin: auto;
+    }
+
+    .code {
+        text-align: center;
+        background: #fff2;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+    }
+
+    .qr {
+        padding: 15px;
+        background: #fff;
+        border-radius: 5px;
+        width: 150px;
+    }
+
+    .logoCont {
+        border-radius: 5px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    h1 {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 36pt;
+    }
+
+    .slide {
+        display: none;
+    }
+
+    .controls {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        background: #fff4;
+        color: black;
+        padding: 20px;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: .2s;
+        border: none;
+    }
+
+    button:hover {
+        background: #fff7;
+    }
+
+    #exit{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    </style>
+    <script>
+    var current = 1;
+    var max = document.getElementsByClassName("slide").length;
+    document.getElementById(current).style.display = "block";
+    const TIMEOUT_LENGTH = 30000;
+    var timeout = setTimeout(goHome, TIMEOUT_LENGTH);
+
+    function goBack(){
+        if(current > 1){
+            document.getElementById(current).style.display = "none";
+            document.getElementById(--current).style.display = "block";
+        }
+    }
+
+    function goNext(){
+        if(current < max){
+            document.getElementById(current).style.display = "none";
+            document.getElementById(++current).style.display = "block";
+        }
+    }
+
+    function resetTime(){
+        clearTimeout(timeout);
+        timeout = setTimeout(goHome, TIMEOUT_LENGTH);
+    }
+
+    function goHome() {
+        location.href = "index.html";
+    }
+    </script>
+</html>

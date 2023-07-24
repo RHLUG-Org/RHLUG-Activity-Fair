@@ -79,3 +79,56 @@ header {
   background: url('../background.jpg');
   background-size: cover;
 }
+
+body {
+  overflow: hidden;
+}
+
+#svg8 {
+            animation: blowup 2s infinite;
+            animation-delay: 5s;
+            transform-origin: 100mm 67mm;
+        }
+
+        #mainFrame {
+            height: 100vh;
+            width: 100vw;
+            border: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #coverDiv {
+            background: #800;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+            z-index: 1000000000;
+            color: #eee;
+        }
+
+        #layer2 {
+            animation: dropin 3s ease-out;
+            aimation-delay: 0s;
+        }
+
+        #L{
+            opacity: 0;
+            animation: appear .1s forwards, appear reverse .5s forwards;
+            animation-delay: 2s, 5s;
+        }
+
+        #U{
+            opacity: 0;
+            animation: appear .1s forwards, appear reverse .5s forwards;
+            animation-delay: 2.5s, 5s;
+        }
+
+        #G{
+            opacity: 0;
+            animation: appear .1s forwards, appear reverse .5s forwards;
+            animation-delay: 3s, 5s;
+        }

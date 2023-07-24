@@ -1,0 +1,23 @@
+{
+  "name": "rhlug-activity-fair",
+  "version": "1.0.0",
+  "description": "Information Kiosk Program for Rose-Hulman Activity Fair.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RHLUG-Org/RHLUG-Activity-Fair.git"
+  },
+  "author": "Rose Hulman Linux User Group",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/RHLUG-Org/RHLUG-Activity-Fair/issues"
+  },
+  "homepage": "https://github.com/RHLUG-Org/RHLUG-Activity-Fair#readme",
+  "devDependencies": {
+    "electron": "^25.3.1"
+  }
+}
