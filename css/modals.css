@@ -1,0 +1,60 @@
+#modalBackground {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background: #0006;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalFrame {
+    background: #eee;
+    width: min-content;
+    height: min-content;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px #0002;
+    min-height: 400px;
+    min-width: 400px;
+    overflow: hidden;
+}
+
+#modalHeader {
+    background: #444;
+    display: flex;
+}
+
+#modalHeader button {
+    margin: 0px 10px 0px auto;
+    border: none;
+    background: transparent;
+    color: #eee;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+#modalContent {
+    height: 100%;
+    width: 100%;
+}
+
+#qrcode {
+    width: min-content;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #0003;
+    margin: 10px auto;
+}
+
+#qrSpan {
+    display: block;
+    text-align: center;
+    margin: 15px;
+    font-size: 14pt;
+    color: #777;
+}

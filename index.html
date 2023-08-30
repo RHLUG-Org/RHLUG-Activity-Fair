@@ -13,6 +13,9 @@
     <!-- Custom CSS -->
     <link href="css/customcss.css" rel="stylesheet" type="text/css" />
 
+    <!-- Custom CSS -->
+    <link href="css/modals.css" rel="stylesheet" type="text/css" />
+
     <!-- Custom Fonts -->
     <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <link
@@ -120,9 +123,6 @@
               <a href="#page-top"></a>
             </li>
             <li class="page-scroll">
-              <a href="#email">Join</a>
-            </li>
-            <li class="page-scroll">
               <a href="#minecraft">Minecraft</a>
             </li>
             <li class="page-scroll">
@@ -140,17 +140,12 @@
             <li class="page-scroll">
               <a href="#about">About</a>
             </li>
-            <!-- <li class="page-scroll">
-              <a href="#socials">Socials</a>
-            </li> -->
             <li class="page-scroll">
-              <a href="join.html" id="contactButton">Join LUG</a>
+              <a href="join.html" class="rgbButton" id="contactButton">Join LUG</a>
             </li>
           </ul>
         </div>
-        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->
@@ -200,7 +195,7 @@
               You can do it right here!
             </p>
             <a href="join.html">
-              <button class="btn-lg btn btn-success" style="text-decoration: none; color: white;">Join RHLUG</button>
+              <button class="btn-huge btn rgbButton" style="text-decoration: none; color: white;">Join RHLUG</button>
             </a>
           </div>
         </div>
@@ -211,7 +206,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2>New RH Minecraft Server</h2>
+            <h2>Rose-Hulman Minecraft</h2>
           </div>
         </div>
         <hr class="star-light" />
@@ -226,27 +221,24 @@
               out some of the repositories of the LUG GitHub page.
             </p>
             <div class="inline-container">
-              <form action="https://wiki.rhlug.org/wiki/RHIT_Minecraft_Server">
                 <input
+                  onclick="showQR('https://wiki.rhlug.org/wiki/RHIT_Minecraft_Server')"
                   class="btn-lg btn btn-success-2"
                   type="submit"
-                  value="Connect to the Minecraft Server"
+                  value="How To Connect"
                 />
-              </form>
-              <form action="https://discord.gg/TRYZya8">
                 <input
+                  onclick="showQR('https://discord.gg/TRYZya8')"
                   class="btn-lg btn btn-success-2"
                   type="submit"
-                  value="Join the Discord server"
+                  value="Join RH Minecraft on Discord"
                 />
-              </form>
-              <form action="https://github.com/RHLUG-Org">
                 <input
+                  onclick="showQR('https://github.com/RHLUG-Org')"
                   class="btn-lg btn btn-success-2"
                   type="submit"
                   value="Visit our GitHub repos"
                 />
-              </form>
             </div>
           </div>
         </div>
@@ -267,18 +259,16 @@
               We maintain a Wiki for people using Linux at Rose-Hulman along
               with other general Linux information.
             </p>
-            <form action="https://wiki.rhlug.org/">
               <input
+                onclick="showQR('https://wiki.rhlug.org/')"
                 class="btn-lg btn btn-success"
                 type="submit"
                 value="Visit the Wiki"
               />
-            </form>
           </div>
         </div>
       </div>
     </section>
-one of the QR codes to join our chat room on the platform of your choice
     <section id="vpn" class="success">
       <div class="container">
         <div class="row">
@@ -295,50 +285,16 @@ one of the QR codes to join our chat room on the platform of your choice
               off campus. You can do this under Linux. For more info, please
               visit our Wiki by clicking on the button below:
             </p>
-            <form
-              action="https://wiki.rhlug.org/wiki/Accessing_the_Off-Campus_VPN"
-            >
               <input
+                onclick="showQR('https://wiki.rhlug.org/wiki/Accessing_the_Off-Campus_VPN')"
                 class="btn-lg btn btn-success-2"
                 type="submit"
                 value="VPN Wiki page"
               />
-            </form>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- <section id="owncloud">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>Owncloud</h2>
-          </div>
-        </div>
-        <hr class="star-light" />
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <p style="font-size: 16pt">
-              Owncloud is an open source and self-hosted alternative to Dropbox
-              (and a few other things) which we host for Rose-Hulman Students,
-              Faculty, and Staff to use. We are still working on getting this up
-              and running again.
-            </p>
-            <form action="https://t.me/rhlug/">
-              <input
-                class="btn-lg btn btn-success"
-                type="submit"
-                value="Stay updated by joining the Telegram"
-              />
-            </form>
-            <!--<form action="https://owncloud.rhlug.org/">
-                        <input class="btn-lg btn btn-success-2" type="submit" value="Go to Owncloud">
-                    </form>- ->
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section id="vm">
       <div class="container">
@@ -356,15 +312,12 @@ one of the QR codes to join our chat room on the platform of your choice
               machines that people can request. Visit our Wiki page for updated
               information.
             </p>
-            <form
-              action="https://wiki.rhlug.org/LUG_Physical_and_Virtual_Machines"
-            >
               <input
-                class="btn-lg btn btn-success-2"
+                onclick="showQR('https://wiki.rhlug.org/LUG_Physical_and_Virtual_Machines')"
+                class="btn-lg btn btn-success"
                 type="submit"
                 value="Physical/Virtual Machines Wiki page"
               />
-            </form>
           </div>
         </div>
       </div>
@@ -394,33 +347,30 @@ one of the QR codes to join our chat room on the platform of your choice
 
             <p>
               If you would like more information, or if you want to stay up to
-              date on our club is doing, please join our Telegram group by
+              date on our club is doing, please join one of our chat rooms by
               clicking below:
             </p>
 
-            <form action="https://matrix.to/#/%23rhlug%3Arhlug.org">
               <input
-                class="btn-lg btn btn-success"
+                onclick="showQR('https://matrix.to/#/%23rhlug%3Arhlug.org')"
+                class="btn-lg btn btn-success-2"
                 type="submit"
                 value="Join the Matrix group!"
               />
-            </form>
 
-            <form action="https://t.me/rhlug">
               <input
-                class="btn-lg btn btn-success"
+              onclick="showQR('https://t.me/rhlug')"
+                class="btn-lg btn btn-success-2"
                 type="submit"
                 value="Join the Telegram!"
               />
-            </form>
             
-            <form action="https://discord.gg/DpdtRCACeu">
               <input
-                class="btn-lg btn btn-success"
+              onclick="showQR('https://discord.gg/DpdtRCACeu')"
+                class="btn-lg btn btn-success-2"
                 type="submit"
                 value="Join our Discord Server!"
               />
-            </form>
           </div>
         </div>
       </div>
@@ -465,7 +415,7 @@ one of the QR codes to join our chat room on the platform of your choice
             <p style="font-size: 16pt">
               Questions or want more information about us?
               Please join the Matrix or Telegram groups and DM one of the officers (which are mods on the Matrix or Telegram server),
-              or contact the <a href="https://wiki.rhlug.org/index.php/Officers">current President listed here</a>
+              or contact the <a href="#" onclick="showQR('https://wiki.rhlug.org/index.php/Officers')">current President listed here</a>
               by finding his/her email.
             </p>
           </div>
@@ -485,7 +435,7 @@ one of the QR codes to join our chat room on the platform of your choice
                 Terre Haute, IN 47803<br />
                 GPS: 39.483876, -87.324020
               </p>
-              <a href="https://www.openstreetmap.org/#map=17/39.48313/-87.32341"
+              <a href="#" onclick="showQR('https://www.openstreetmap.org/#map=17/39.48313/-87.32341')"
                 ><img src="img/campus-map.svg"
               /></a>
             </div>
@@ -504,7 +454,8 @@ one of the QR codes to join our chat room on the platform of your choice
               Since we're all about open source, we should be providing the
               source code.
               <a
-                href="https://github.com/RHLUG-Org/RHLUG-Website"
+                href="#"
+                onclick="showQR('https://github.com/RHLUG-Org/RHLUG-Website')"
                 style="color: #cccccc"
                 >Click here to view the source code!</a
               >
@@ -521,13 +472,7 @@ one of the QR codes to join our chat room on the platform of your choice
       </a>
     </div>
 
-    <!-- JQuery -->
-    <script src="js/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/freelancer.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/modals.js"></script>
   </body>
 </html>

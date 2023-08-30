@@ -4,7 +4,7 @@
         document.getElementById("coverDiv").style.display = "none";
         document.body.style.overflow = "auto";
         clearTimeout(timeout);
-        timeout = setTimeout(hideWebsite, 5000);
+        timeout = setTimeout(hideWebsite, 10000);
     }
 
 
@@ -50,6 +50,8 @@
                 offset: 1
             }
         ];
+
+var boom, drop, l, u, g, cancel;
 window.onload = function() {
     console.log("Starting Animation!");
     boom = document.getElementById('svg8').animate(blowup, {

@@ -37,10 +37,29 @@
                 </div>
                 <p>Scan the QR code to join us on Campus Groups. When you have done so, please click next</p>
             </div>
+            <div class="slide" id=3>
+                <h1>Congrats! Your now a LUG member!</h1>
+                <img src="img/confetti-2.gif" style="height: 25vh;"></img>
+                <h3>Here's the time and date for our next meeting:</h3>
+                <div class="row" id="meetingRow">
+                    <!--Dynamically grab the meeting time using Javascript-->
+                    <p id="meeting"></p>
+                    <br />
+                    <p>
+                        <strong>
+                        &mdash;
+                        Join Us In
+                        &mdash;
+                        </strong>
+                    </p>
+                    <br />
+                    <p id="meeting_location"></p>
+                    </div>
+            </div>
         </div>
         <div class="controls">
-            <button onclick="goBack()">Back</button>
-            <button onclick="goNext()" float="right">Next</button>
+            <button onclick="goBack()" id="backB">Back</button>
+            <button onclick="goNext()" id="nextB" float="right">Next</button>
         </div>
         <button id="exit" onclick="goHome()">Exit</button>
     </body>
@@ -48,7 +67,7 @@
     body {
         text-align: center;
         color: #eee;
-        background: #800;
+        background: linear-gradient(#833, #830b0b);
         font-family: sans-serif;
     }
 
@@ -120,7 +139,30 @@
         top: 5px;
         left: 5px;
     }
+
+    #meetingRow {
+  background: white;
+  box-shadow: inset 0px 0px 12px rgba(0, 0, 0, .5);
+  color: black;
+  width: 70vw;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 15px;
+  border-radius: 15px;
+}
+#meetingRow a {
+  color: #47a2f1;
+}
+
+#meeting, #meeting_location {
+  font-size: 20pt;
+}
+
+#meetingRow p {
+    margin: 10px 0px;
+}
     </style>
+    <script src="js/meeting.js"></script>
     <script>
     var current = 1;
     var max = document.getElementsByClassName("slide").length;
@@ -133,6 +175,7 @@
             document.getElementById(current).style.display = "none";
             document.getElementById(--current).style.display = "block";
         }
+        hideButtons();
     }
 
     function goNext(){
@@ -140,7 +183,23 @@
             document.getElementById(current).style.display = "none";
             document.getElementById(++current).style.display = "block";
         }
+        hideButtons();
     }
+
+    //Hides the next or back button when on the first or last slide
+    function hideButtons(){
+        if(current <= 1) {
+            document.getElementById("backB").style.opacity = "0";
+        } else {
+            document.getElementById("backB").style.opacity = "1";
+        }
+        if(current >= max) {
+            document.getElementById("nextB").style.opacity = "0";
+        } else {
+            document.getElementById("nextB").style.opacity = "1";
+        }
+    }
+    hideButtons();
 
     function resetTime(){
         clearTimeout(timeout);
